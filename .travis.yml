@@ -1,0 +1,27 @@
+language: ruby
+
+sudo: false
+
+cache: bundler
+
+before_install:
+  - gem update bundler
+
+rvm:
+  - 2.2.10
+  - 2.3.8
+  - 2.4.5
+  - 2.5.3
+  - 2.6.5
+  - 2.7.0
+  - ruby-head
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+  fast_finish: true
+
+notifications:
+  recipients:
+    - mail@zzak.io
+  slack: sinatrarb:LQGhUfGYcqRgRzwKea0bqUhY

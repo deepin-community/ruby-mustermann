@@ -1,0 +1,28 @@
+Source: ruby-mustermann
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb (>= 1),
+               ruby-ruby2-keywords,
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-mustermann.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-mustermann
+Homepage: https://github.com/sinatra/mustermann
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-mustermann
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+X-DhRuby-Root: mustermann
+Description: use patterns like regular expressions
+ library implementing patterns that behave like regular expressions.
+ .
+ Given a string pattern, Mustermann will turn it into an object that behaves
+ like a regular expression and has comparable performance characteristics.
